@@ -27,13 +27,13 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ny4-Me-QIA">
                                         <rect key="frame" x="0.0" y="43.5" width="374" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2w-co-vQb">
                                         <rect key="frame" x="0.0" y="86.5" width="374" height="33.5"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
-                                            <segue destination="gRj-AU-vJg" kind="presentation" modalPresentationStyle="fullScreen" id="LC2-mc-boJ"/>
+                                            <action selector="loginTapped:" destination="X0G-OE-EnW" eventType="touchUpInside" id="HLe-9m-i8x"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -52,15 +52,20 @@
                             <constraint firstItem="Kyv-4d-unM" firstAttribute="trailing" secondItem="MCv-gm-WBd" secondAttribute="trailing" constant="20" id="g95-U3-0Ee"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="6OR-sF-ho1" id="w5b-Dq-8lR"/>
+                        <outlet property="loginButton" destination="D2w-co-vQb" id="Bqx-Jr-5bW"/>
+                        <outlet property="passwordTextField" destination="Ny4-Me-QIA" id="pKL-mE-BVc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edD-3L-fuB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="95.652173913043484" y="64.955357142857139"/>
         </scene>
-        <!--Search VC-->
+        <!--Search-->
         <scene sceneID="cjv-Sv-EPf">
             <objects>
-                <tableViewController id="gNt-98-jr7" userLabel="Search VC" sceneMemberID="viewController">
+                <tableViewController id="gNt-98-jr7" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="87p-6l-HJW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="3057" y="-664"/>
         </scene>
-        <!--Watchlist VC-->
+        <!--Watchlist-->
         <scene sceneID="OAV-T5-B4H">
             <objects>
-                <tableViewController id="Dxw-hh-oVb" userLabel="Watchlist VC" sceneMemberID="viewController">
+                <tableViewController id="Dxw-hh-oVb" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="n9a-2V-hiS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="3057" y="65"/>
         </scene>
-        <!--Movie Detail VC-->
+        <!--Movie Detail-->
         <scene sceneID="S6i-7V-aE0">
             <objects>
-                <viewController id="4nC-8W-qhP" userLabel="Movie Detail VC" sceneMemberID="viewController">
+                <viewController id="4nC-8W-qhP" userLabel="Movie Detail" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MHY-HP-s0X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="4280" y="65"/>
         </scene>
-        <!--Watchlist VC-->
+        <!--Watchlist-->
         <scene sceneID="GwZ-nK-kGZ">
             <objects>
-                <navigationController id="8b0-n1-109" userLabel="Watchlist VC" sceneMemberID="viewController">
+                <navigationController id="8b0-n1-109" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Watchlist" image="list.bullet" catalog="system" id="7V1-jP-5l1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3U5-fG-mQ7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -151,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="2167" y="65"/>
         </scene>
-        <!--Favorites VC-->
+        <!--Favorites-->
         <scene sceneID="JXc-Ue-BZ2">
             <objects>
-                <tableViewController id="Zb8-WI-A8U" userLabel="Favorites VC" sceneMemberID="viewController">
+                <tableViewController id="Zb8-WI-A8U" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Shb-t6-Vsd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,10 +187,10 @@
             </objects>
             <point key="canvasLocation" x="3057" y="844"/>
         </scene>
-        <!--Favorites VC-->
+        <!--Favorites-->
         <scene sceneID="YIs-WB-KMu">
             <objects>
-                <navigationController id="Hpb-Jd-kwi" userLabel="Favorites VC" sceneMemberID="viewController">
+                <navigationController id="Hpb-Jd-kwi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" image="heart.fill" catalog="system" id="NUb-fz-XiX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mzx-9C-R79">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -199,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="2167" y="844"/>
         </scene>
-        <!--Search VC-->
+        <!--Search-->
         <scene sceneID="oSE-rq-dfm">
             <objects>
-                <navigationController id="6gy-JY-Npj" userLabel="Search VC" sceneMemberID="viewController">
+                <navigationController id="6gy-JY-Npj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="sVx-dY-jMu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zu6-Sq-tme">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
