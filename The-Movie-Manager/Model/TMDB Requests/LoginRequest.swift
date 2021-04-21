@@ -12,7 +12,7 @@ struct LoginRequest: Codable {
     let password: String
     let requestToken: String
     
-    enum codingKeys: String, CodingKey{
+    enum CodingKeys: String, CodingKey{
         case username
         case password
         case requestToken = "request_token"
