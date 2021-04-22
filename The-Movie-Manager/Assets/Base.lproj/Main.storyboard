@@ -19,27 +19,45 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MCv-gm-WBd">
                                 <rect key="frame" x="20" y="74" width="374" height="120"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6OR-sF-ho1">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hexRGB" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6OR-sF-ho1">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ny4-Me-QIA">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="fCJoQdAk7$r" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ny4-Me-QIA">
                                         <rect key="frame" x="0.0" y="43.5" width="374" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2w-co-vQb">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ExO-Ac-Ovn">
                                         <rect key="frame" x="0.0" y="86.5" width="374" height="33.5"/>
-                                        <state key="normal" title="Login"/>
-                                        <connections>
-                                            <action selector="loginTapped:" destination="X0G-OE-EnW" eventType="touchUpInside" id="HLe-9m-i8x"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2w-co-vQb">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="33.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Login"/>
+                                                <connections>
+                                                    <action selector="loginTapped:" destination="X0G-OE-EnW" eventType="touchUpInside" id="HLe-9m-i8x"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7p-ay-XiD" userLabel="TMDb Button">
+                                                <rect key="frame" x="187" y="0.0" width="187" height="33.5"/>
+                                                <state key="normal" title="Login with TMDb"/>
+                                                <connections>
+                                                    <action selector="loginWithWebsite:" destination="X0G-OE-EnW" eventType="touchUpInside" id="Hwh-oR-jxm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="H7p-ay-XiD" firstAttribute="width" secondItem="D2w-co-vQb" secondAttribute="width" id="KUF-Lc-2Iz"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="D2w-co-vQb" firstAttribute="height" secondItem="6OR-sF-ho1" secondAttribute="height" id="S9H-uV-EdU"/>
-                                    <constraint firstItem="Ny4-Me-QIA" firstAttribute="height" secondItem="6OR-sF-ho1" secondAttribute="height" id="kP9-rC-121"/>
+                                    <constraint firstItem="Ny4-Me-QIA" firstAttribute="height" secondItem="6OR-sF-ho1" secondAttribute="height" id="5SE-SY-HVY"/>
+                                    <constraint firstAttribute="trailing" secondItem="ExO-Ac-Ovn" secondAttribute="trailing" id="bSg-8c-MrX"/>
+                                    <constraint firstItem="ExO-Ac-Ovn" firstAttribute="leading" secondItem="MCv-gm-WBd" secondAttribute="leading" id="ePX-fV-OVE"/>
+                                    <constraint firstItem="ExO-Ac-Ovn" firstAttribute="height" secondItem="6OR-sF-ho1" secondAttribute="height" id="hdX-an-mxX"/>
                                     <constraint firstAttribute="height" constant="120" id="wlm-9y-oKE"/>
                                 </constraints>
                             </stackView>
@@ -97,7 +115,7 @@
         <!--Watchlist-->
         <scene sceneID="OAV-T5-B4H">
             <objects>
-                <tableViewController id="Dxw-hh-oVb" sceneMemberID="viewController">
+                <tableViewController id="Dxw-hh-oVb" customClass="WatchlistViewController" customModule="The_Movie_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="n9a-2V-hiS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

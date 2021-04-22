@@ -25,16 +25,22 @@ class TMDBClient {
         case getWatchlist
         case login
         case createSessionId
+        case getAccountDetails
+        case webAuth
         
         
         var stringValue: String {
             switch self {
-            case .getWatchlist: return Endpoints.base + "account/\(Auth.accountId)/watchlist/movies" + Endpoints.apiKeyParam + "&session_id=\(Auth.sessionId)"
+            case .getWatchlist: return Endpoints.base + "/account/\(Auth.accountId)/watchlist/movies" + Endpoints.apiKeyParam + "&session_id=\(Auth.sessionId)"
             case .getRequestToken: return Endpoints.base + "/authentication/token/new" + Endpoints.apiKeyParam
             case .login:
                 return Endpoints.base + "/authentication/token/validate_with_login" + Endpoints.apiKeyParam
             case .createSessionId:
                 return Endpoints.base + "/authentication/session/new" + Endpoints.apiKeyParam
+            case .getAccountDetails:
+                return Endpoints.base + "/account" + Endpoints.apiKeyParam + "&session_id=\(Auth.sessionId)"
+            case .webAuth:
+                return "https://www.themoviedb.org/authenticate/" + Auth.requestToken + "?redirect_to=themoviemanager:authenticate"
             }
         }
         
@@ -110,13 +116,32 @@ class TMDBClient {
         task.resume()
     }
     
+    class func getAccountDetails(completion: @escaping (Bool, Error?) -> Void) {
+        let task = URLSession.shared.dataTask(with: Endpoints.getAccountDetails.url) { data, response, error in
+            guard let data = data else {
+                completion(false, error)
+                print("YES!")
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+                let responseObject = try decoder.decode(AccountResponse.self, from: data)
+                Auth.accountId = responseObject.id
+                completion(true, error)
+            } catch {
+                completion(false, error)
+            }
+        }
+        task.resume()
+    }
+    
     class func getWatchList(completion: @escaping ([Movie], Error?) -> Void) {
         let task = URLSession.shared.dataTask(with: Endpoints.getWatchlist.url) { data, response, error in
             guard let data = data else {
                 completion([], error)
                 return
             }
-            print(String(data: data, encoding: .utf8)!)
+            
             let decoder = JSONDecoder()
             do {
                 let responseObject = try decoder.decode(MovieResults.self, from: data)

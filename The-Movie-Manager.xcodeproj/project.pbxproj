@@ -17,6 +17,8 @@
 		4B3705EC2630038E00FC62B0 /* PostSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3705EB2630038E00FC62B0 /* PostSession.swift */; };
 		4B3705EF263003A900FC62B0 /* SessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3705EE263003A900FC62B0 /* SessionResponse.swift */; };
 		4B3705F2263019D800FC62B0 /* WatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3705F1263019D800FC62B0 /* WatchlistViewController.swift */; };
+		4B40638E26314F4A00C94C98 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B40638D26314F4A00C94C98 /* MovieDetailViewController.swift */; };
+		4B4063952631566C00C94C98 /* AccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4063942631566C00C94C98 /* AccountResponse.swift */; };
 		4BF694502626010700DD7F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF6944F2626010700DD7F2C /* AppDelegate.swift */; };
 		4BF694522626010700DD7F2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF694512626010700DD7F2C /* SceneDelegate.swift */; };
 		4BF694542626010700DD7F2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF694532626010700DD7F2C /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 		4B3705EB2630038E00FC62B0 /* PostSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSession.swift; sourceTree = "<group>"; };
 		4B3705EE263003A900FC62B0 /* SessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResponse.swift; sourceTree = "<group>"; };
 		4B3705F1263019D800FC62B0 /* WatchlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewController.swift; sourceTree = "<group>"; };
+		4B40638D26314F4A00C94C98 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		4B4063942631566C00C94C98 /* AccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountResponse.swift; sourceTree = "<group>"; };
 		4BF6944C2626010700DD7F2C /* The-Movie-Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Movie-Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF6944F2626010700DD7F2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BF694512626010700DD7F2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 			children = (
 				4B02310F26289566000FEDA5 /* LoginViewController.swift */,
 				4B3705F1263019D800FC62B0 /* WatchlistViewController.swift */,
+				4B40638D26314F4A00C94C98 /* MovieDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				4B028FB1262F14A50029D7BF /* MovieResults.swift */,
 				4B028FB4262F24650029D7BF /* RequestTokenResponse.swift */,
 				4B3705EE263003A900FC62B0 /* SessionResponse.swift */,
+				4B4063942631566C00C94C98 /* AccountResponse.swift */,
 			);
 			path = "TMDB Responses";
 			sourceTree = "<group>";
@@ -235,8 +241,10 @@
 				4B028FAC262F14250029D7BF /* MovieModel.swift in Sources */,
 				4B028FA9262F0B5D0029D7BF /* TMDBClient.swift in Sources */,
 				4B028FBC262F2F4D0029D7BF /* LoginRequest.swift in Sources */,
+				4B40638E26314F4A00C94C98 /* MovieDetailViewController.swift in Sources */,
 				4B3705F2263019D800FC62B0 /* WatchlistViewController.swift in Sources */,
 				4B02311026289566000FEDA5 /* LoginViewController.swift in Sources */,
+				4B4063952631566C00C94C98 /* AccountResponse.swift in Sources */,
 				4B3705EC2630038E00FC62B0 /* PostSession.swift in Sources */,
 				4BF694542626010700DD7F2C /* ViewController.swift in Sources */,
 				4BF694502626010700DD7F2C /* AppDelegate.swift in Sources */,
