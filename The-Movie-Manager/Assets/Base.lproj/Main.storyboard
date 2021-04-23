@@ -33,24 +33,14 @@
                                         <rect key="frame" x="0.0" y="86.5" width="374" height="33.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2w-co-vQb">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="33.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="Login"/>
                                                 <connections>
                                                     <action selector="loginTapped:" destination="X0G-OE-EnW" eventType="touchUpInside" id="HLe-9m-i8x"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7p-ay-XiD" userLabel="TMDb Button">
-                                                <rect key="frame" x="187" y="0.0" width="187" height="33.5"/>
-                                                <state key="normal" title="Login with TMDb"/>
-                                                <connections>
-                                                    <action selector="loginWithWebsite:" destination="X0G-OE-EnW" eventType="touchUpInside" id="Hwh-oR-jxm"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="H7p-ay-XiD" firstAttribute="width" secondItem="D2w-co-vQb" secondAttribute="width" id="KUF-Lc-2Iz"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -105,7 +95,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Search" id="e6q-Di-Jji">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" image="arrowshape.turn.up.backward.fill" catalog="system" id="c3C-g6-LQP"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" image="arrowshape.turn.up.backward.fill" catalog="system" id="c3C-g6-LQP">
+                            <connections>
+                                <action selector="logoutTapped:" destination="gNt-98-jr7" id="0zf-gW-0KJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDM-EH-2U8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -136,7 +130,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Watchlist" id="9bt-Qn-iHv">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" image="arrowshape.turn.up.backward.fill" catalog="system" id="06Z-rw-9fq"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" image="arrowshape.turn.up.backward.fill" catalog="system" id="06Z-rw-9fq">
+                            <connections>
+                                <action selector="logoutTapped:" destination="Dxw-hh-oVb" id="uUk-Gt-q62"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyb-D7-1Zs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -199,7 +197,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorites" id="3y6-bI-AXe">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" image="arrowshape.turn.up.backward.fill" catalog="system" id="Jk8-2n-CTa"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" image="arrowshape.turn.up.backward.fill" catalog="system" id="Jk8-2n-CTa">
+                            <connections>
+                                <action selector="logoutTapped:" destination="Zb8-WI-A8U" id="0I0-Ot-MqL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZM-UD-NDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
