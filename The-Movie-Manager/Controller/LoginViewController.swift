@@ -22,15 +22,9 @@ class LoginViewController: UIViewController {
     }
     
     func handleRequestTokenResponse(success: Bool, error: Error?) {
-        DispatchQueue.main.async {
-            print(self.emailTextField.text!)
-            print(self.passwordTextField.text!)
-        }
         if success {
             print(TMDBClient.Auth.requestToken)
-            DispatchQueue.main.async {
-                TMDBClient.login(username: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "", completion: self.handleLoginResponse(success:error:))
-            }
+            TMDBClient.login(username: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "", completion: self.handleLoginResponse(success:error:))
         }
     }
     
@@ -44,9 +38,7 @@ class LoginViewController: UIViewController {
     func handleSessionResponse(success: Bool, error: Error?) {
         if success {
             print(TMDBClient.Auth.sessionId)
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "completeLogin", sender: nil)
-            }
+            self.performSegue(withIdentifier: "completeLogin", sender: nil)
         }
     }
     
