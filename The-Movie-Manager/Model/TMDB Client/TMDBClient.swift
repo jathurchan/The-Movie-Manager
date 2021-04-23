@@ -49,22 +49,33 @@ class TMDBClient {
         }
     }
     
-    class func getRequestToken(completion: @escaping (Bool, Error?) -> Void) {
-        let task = URLSession.shared.dataTask(with: Endpoints.getRequestToken.url) { data, response, error in
+    class func taskForGETRequest<ResponseType: Decodable>(url: URL, response: ResponseType.Type, completion: @escaping (ResponseType?, Error?) -> Void) {
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else {
-                completion(false, error)
+                completion(nil, error)
                 return
             }
             let decoder = JSONDecoder()
             do {
-                let responseObject = try decoder.decode(RequestTokenResponse.self, from: data)
-                Auth.requestToken = responseObject.requestToken
-                completion(true, nil)
+                let responseObject = try decoder.decode(ResponseType.self, from: data)
+                
+                completion(responseObject, nil)
             } catch {
-                completion(false, error)
+                completion(nil, error)
             }
         }
         task.resume()
+    }
+    
+    class func getRequestToken(completion: @escaping (Bool, Error?) -> Void) {
+        taskForGETRequest(url: Endpoints.getRequestToken.url, response: RequestTokenResponse.self) { (response, error) in
+            if let response = response {
+                Auth.requestToken = response.requestToken
+                completion(true, nil)
+            } else {
+                completion(false, error)
+            }
+        }
     }
     
     class func login(username: String, password: String, completion: @escaping (Bool, Error?) -> Void) {
@@ -136,23 +147,13 @@ class TMDBClient {
     }
     
     class func getWatchList(completion: @escaping ([Movie], Error?) -> Void) {
-        let task = URLSession.shared.dataTask(with: Endpoints.getWatchlist.url) { data, response, error in
-            guard let data = data else {
-                completion([], error)
-                return
-            }
-            
-            let decoder = JSONDecoder()
-            do {
-                let responseObject = try decoder.decode(MovieResults.self, from: data)
-                completion(responseObject.results, nil)
-            } catch {
+        taskForGETRequest(url: Endpoints.getWatchlist.url, response: MovieResults.self) { (response, error) in
+            if let response = response {
+                completion(response.results, nil)
+            } else {
                 completion([], error)
             }
         }
-        
-        task.resume()
-        
     }
     
     class func logout(completion: @escaping () -> Void) {
