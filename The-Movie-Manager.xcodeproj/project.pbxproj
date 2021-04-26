@@ -19,6 +19,8 @@
 		4B3705F2263019D800FC62B0 /* WatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3705F1263019D800FC62B0 /* WatchlistViewController.swift */; };
 		4B40638E26314F4A00C94C98 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B40638D26314F4A00C94C98 /* MovieDetailViewController.swift */; };
 		4B4063952631566C00C94C98 /* AccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4063942631566C00C94C98 /* AccountResponse.swift */; };
+		4B5F7EB8263685D300BE6BA5 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F7EB7263685D300BE6BA5 /* FavoritesViewController.swift */; };
+		4B5F7EBC26368A9500BE6BA5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F7EBB26368A9500BE6BA5 /* SearchViewController.swift */; };
 		4B7DE51B2632BE04008BD595 /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7DE51A2632BE04008BD595 /* LogoutRequest.swift */; };
 		4B7DE51E2632BF95008BD595 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7DE51D2632BF95008BD595 /* UIViewController+Extension.swift */; };
 		4BF694502626010700DD7F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF6944F2626010700DD7F2C /* AppDelegate.swift */; };
@@ -42,6 +44,8 @@
 		4B3705F1263019D800FC62B0 /* WatchlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewController.swift; sourceTree = "<group>"; };
 		4B40638D26314F4A00C94C98 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		4B4063942631566C00C94C98 /* AccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountResponse.swift; sourceTree = "<group>"; };
+		4B5F7EB7263685D300BE6BA5 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		4B5F7EBB26368A9500BE6BA5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4B7DE51A2632BE04008BD595 /* LogoutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequest.swift; sourceTree = "<group>"; };
 		4B7DE51D2632BF95008BD595 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		4BF6944C2626010700DD7F2C /* The-Movie-Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Movie-Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,7 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				4B02310F26289566000FEDA5 /* LoginViewController.swift */,
+				4B5F7EBB26368A9500BE6BA5 /* SearchViewController.swift */,
 				4B3705F1263019D800FC62B0 /* WatchlistViewController.swift */,
+				4B5F7EB7263685D300BE6BA5 /* FavoritesViewController.swift */,
 				4B40638D26314F4A00C94C98 /* MovieDetailViewController.swift */,
 				4B7DE51D2632BF95008BD595 /* UIViewController+Extension.swift */,
 			);
@@ -247,12 +253,14 @@
 				4B7DE51B2632BE04008BD595 /* LogoutRequest.swift in Sources */,
 				4B028FAC262F14250029D7BF /* MovieModel.swift in Sources */,
 				4B028FA9262F0B5D0029D7BF /* TMDBClient.swift in Sources */,
+				4B5F7EBC26368A9500BE6BA5 /* SearchViewController.swift in Sources */,
 				4B7DE51E2632BF95008BD595 /* UIViewController+Extension.swift in Sources */,
 				4B028FBC262F2F4D0029D7BF /* LoginRequest.swift in Sources */,
 				4B40638E26314F4A00C94C98 /* MovieDetailViewController.swift in Sources */,
 				4B3705F2263019D800FC62B0 /* WatchlistViewController.swift in Sources */,
 				4B02311026289566000FEDA5 /* LoginViewController.swift in Sources */,
 				4B4063952631566C00C94C98 /* AccountResponse.swift in Sources */,
+				4B5F7EB8263685D300BE6BA5 /* FavoritesViewController.swift in Sources */,
 				4B3705EC2630038E00FC62B0 /* PostSession.swift in Sources */,
 				4BF694542626010700DD7F2C /* ViewController.swift in Sources */,
 				4BF694502626010700DD7F2C /* AppDelegate.swift in Sources */,
