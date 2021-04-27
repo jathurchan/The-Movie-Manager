@@ -49,6 +49,16 @@ class WatchlistViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell")!
         let movie = MovieModel.watchlist[indexPath.row]
         cell.textLabel?.text = movie.title
+        if let posterPath = movie.posterPath {
+            TMDBClient.downloadPosterImage(posterPath: posterPath) { (data, error) in
+                guard let data = data else {
+                    return
+                }
+                let image = UIImage(data: data)
+                cell.imageView?.image = image
+                cell.setNeedsLayout()
+            }
+        }
         return cell
     }
     
