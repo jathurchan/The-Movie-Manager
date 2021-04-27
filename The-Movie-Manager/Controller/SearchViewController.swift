@@ -22,7 +22,7 @@ class SearchViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)   {
-        if segue.identifier == "ShowDetail" {
+        if segue.identifier == "showDetail" {
             let detailVC = segue.destination as! MovieDetailViewController
             detailVC.movie = movies[selectedIndex]
         }

@@ -52,4 +52,10 @@ class WatchlistViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        performSegue(withIdentifier: "showDetail", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }

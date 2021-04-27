@@ -25,6 +25,7 @@
 		4B5F7EC326369FDE00BE6BA5 /* TMDBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F7EC226369FDE00BE6BA5 /* TMDBResponse.swift */; };
 		4B7DE51B2632BE04008BD595 /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7DE51A2632BE04008BD595 /* LogoutRequest.swift */; };
 		4B7DE51E2632BF95008BD595 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7DE51D2632BF95008BD595 /* UIViewController+Extension.swift */; };
+		4BD124F62638409E00CFEC67 /* MarkFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD124F52638409E00CFEC67 /* MarkFavorite.swift */; };
 		4BF694502626010700DD7F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF6944F2626010700DD7F2C /* AppDelegate.swift */; };
 		4BF694522626010700DD7F2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF694512626010700DD7F2C /* SceneDelegate.swift */; };
 		4BF694542626010700DD7F2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF694532626010700DD7F2C /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		4B5F7EC226369FDE00BE6BA5 /* TMDBResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBResponse.swift; sourceTree = "<group>"; };
 		4B7DE51A2632BE04008BD595 /* LogoutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequest.swift; sourceTree = "<group>"; };
 		4B7DE51D2632BF95008BD595 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		4BD124F52638409E00CFEC67 /* MarkFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkFavorite.swift; sourceTree = "<group>"; };
 		4BF6944C2626010700DD7F2C /* The-Movie-Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Movie-Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF6944F2626010700DD7F2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BF694512626010700DD7F2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				4B3705EB2630038E00FC62B0 /* PostSession.swift */,
 				4B7DE51A2632BE04008BD595 /* LogoutRequest.swift */,
 				4B5F7EBF26369FAF00BE6BA5 /* MarkWatchlist.swift */,
+				4BD124F52638409E00CFEC67 /* MarkFavorite.swift */,
 			);
 			path = "TMDB Requests";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				4B40638E26314F4A00C94C98 /* MovieDetailViewController.swift in Sources */,
 				4B3705F2263019D800FC62B0 /* WatchlistViewController.swift in Sources */,
 				4B02311026289566000FEDA5 /* LoginViewController.swift in Sources */,
+				4BD124F62638409E00CFEC67 /* MarkFavorite.swift in Sources */,
 				4B4063952631566C00C94C98 /* AccountResponse.swift in Sources */,
 				4B5F7EB8263685D300BE6BA5 /* FavoritesViewController.swift in Sources */,
 				4B3705EC2630038E00FC62B0 /* PostSession.swift in Sources */,
