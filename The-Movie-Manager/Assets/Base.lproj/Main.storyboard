@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X0G-OE-EnW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X0G-OE-EnW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,16 +51,22 @@
                                     <constraint firstAttribute="height" constant="120" id="wlm-9y-oKE"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="TOY-6V-DBL">
+                                <rect key="frame" x="197" y="202" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kyv-4d-unM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MCv-gm-WBd" firstAttribute="leading" secondItem="Kyv-4d-unM" secondAttribute="leading" constant="20" id="1pM-le-qBn"/>
+                            <constraint firstItem="TOY-6V-DBL" firstAttribute="centerX" secondItem="Kyv-4d-unM" secondAttribute="centerX" id="Jef-ry-B34"/>
+                            <constraint firstItem="TOY-6V-DBL" firstAttribute="top" secondItem="MCv-gm-WBd" secondAttribute="bottom" constant="8" symbolic="YES" id="O9g-9W-9O0"/>
                             <constraint firstItem="MCv-gm-WBd" firstAttribute="top" secondItem="Kyv-4d-unM" secondAttribute="top" constant="30" id="YRt-Kf-zGJ"/>
                             <constraint firstItem="Kyv-4d-unM" firstAttribute="trailing" secondItem="MCv-gm-WBd" secondAttribute="trailing" constant="20" id="g95-U3-0Ee"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="TOY-6V-DBL" id="OWl-Qd-oMj"/>
                         <outlet property="emailTextField" destination="6OR-sF-ho1" id="w5b-Dq-8lR"/>
                         <outlet property="loginButton" destination="D2w-co-vQb" id="Bqx-Jr-5bW"/>
                         <outlet property="passwordTextField" destination="Ny4-Me-QIA" id="pKL-mE-BVc"/>
@@ -86,7 +92,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieTableViewCell" rowHeight="50" id="CGD-9F-rAT">
-                                <rect key="frame" x="0.0" y="72" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="68.5" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CGD-9F-rAT" id="60a-wW-mgm">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -125,7 +131,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieTableViewCell" rowHeight="100" id="RWk-Ef-Gv7">
-                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RWk-Ef-Gv7" id="3Dd-wZ-erN">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -177,7 +183,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ehq-It-obF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ehq-It-obF">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
                         </subviews>
@@ -231,7 +237,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieTableViewCell" rowHeight="100" id="JC9-Hs-yBm">
-                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JC9-Hs-yBm" id="TVU-rR-Enb">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>

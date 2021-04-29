@@ -48,6 +48,7 @@ class FavoritesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell")!
         let movie = MovieModel.favorites[indexPath.row]
         cell.textLabel?.text = movie.title
+        cell.imageView?.image = UIImage(named: "PosterPlaceholder")
         if let posterPath = movie.posterPath {
             TMDBClient.downloadPosterImage(posterPath: posterPath) { (data, error) in
                 guard let data = data else {
