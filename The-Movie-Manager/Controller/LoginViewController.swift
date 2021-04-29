@@ -27,6 +27,8 @@ class LoginViewController: UIViewController {
         if success {
             print(TMDBClient.Auth.requestToken)
             TMDBClient.login(username: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "", completion: self.handleLoginResponse(success:error:))
+        } else {
+            showLoginFailure(message: error?.localizedDescription ?? "")
         }
     }
     
@@ -54,6 +56,12 @@ class LoginViewController: UIViewController {
         emailTextField.isEnabled = !loggingIn
         passwordTextField.isEnabled = !loggingIn
         loginButton.isEnabled = !loggingIn
+    }
+    
+    func showLoginFailure(message: String){
+        let alertVC = UIAlertController(title: "Login Failed", message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        show(alertVC, sender: nil)
     }
     
 }
